@@ -6,10 +6,10 @@ const path = require('path');
 const http = require('http');
 const WebSocket = require('ws');
 
-const { router: authRouter, authenticate, requireAdmin } = require('./src/auth');
-const tradeRouter = require('./src/trade');
-const adminRouter = require('./src/admin');
-const PriceEngine = require('./src/priceEngine');
+const { router: authRouter, authenticate, requireAdmin } = require('./auth');
+const tradeRouter = require('./trade');
+const adminRouter = require('./admin');
+const PriceEngine = require('./priceEngine');
 
 const REQUIRED_ENV = ['JWT_SECRET', 'ALPACA_API_KEY', 'ALPACA_SECRET_KEY'];
 for (const key of REQUIRED_ENV) {
